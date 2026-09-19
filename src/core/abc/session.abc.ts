@@ -383,9 +383,6 @@ export abstract class WhatsappSession {
   public getEventObservable(event: WAHAEvents) {
     return this.events2.get(event);
   }
-  public getEventObservable(event: WAHAEvents) {
-    return this.events2.get(event);
-  }
 
   /**
    * Set the status along with the extra info that belongs to it.
