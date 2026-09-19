@@ -1,5 +1,5 @@
 import * as process from 'node:process';
-
+import { OrdersController } from '@waha/api/orders.controller';
 import { INestApplication, MiddlewareConsumer, Module } from '@nestjs/common';
 import { Provider } from '@nestjs/common/interfaces/modules/provider.interface';
 import { ConditionalModule, ConfigModule } from '@nestjs/config';
@@ -212,6 +212,7 @@ export const CONTROLLERS = [
   ServerDebugController,
   VersionController,
   MediaController,
+  OrdersController,
   ...AppsModuleExports.controllers,
 ];
 export const PROVIDERS_BASE: Provider[] = [
