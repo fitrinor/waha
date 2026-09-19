@@ -373,7 +373,16 @@ export abstract class WhatsappSession {
       this.logger.info(msg);
     }
   }
+  async getOrderDetails(
+    orderId: string,
+    token: string,
+  ): Promise<any> {
+    throw new NotImplementedByEngineError();
+  }
 
+  public getEventObservable(event: WAHAEvents) {
+    return this.events2.get(event);
+  }
   public getEventObservable(event: WAHAEvents) {
     return this.events2.get(event);
   }
