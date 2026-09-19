@@ -358,7 +358,12 @@ export class WhatsappSessionNoWebCore extends WhatsappSession {
     );
     this.authNOWEBStore = null;
   }
-
+  async getOrderDetails(
+    orderId: string,
+    token: string,
+  ): Promise<any> {
+    return this.sock.getOrderDetails(orderId, token);
+  }
   protected set status(value: WAHASessionStatus) {
     this.statusTracker.track(value);
     super.status = value;
